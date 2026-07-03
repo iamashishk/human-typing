@@ -3,6 +3,9 @@
 
 A Playwright utility for human-like typing simulation with natural delays, typos and real keyboard events.
 
+> **Built on the original [typerr](https://github.com/Prentk1/typerr/) by Prentk1**  
+> Ported to Playwright with active maintenance.
+
 ## Installation
 
 ```bash
