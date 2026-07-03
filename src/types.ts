@@ -1,8 +1,6 @@
-import { KeyInput } from "puppeteer";
-
 export interface KeyData {
   custom?: boolean;
-  key: KeyInput;
+  key: string;
   center_x: number;
   center_y: number;
   w: number;

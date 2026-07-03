@@ -1,4 +1,4 @@
-import type { Page } from "puppeteer";
+import type { Page } from "playwright";
 import { randomNormal } from "./math";
 
 import {
@@ -185,7 +185,8 @@ export class Keyboard {
     const resolvedLastKey = Keyboard.specialKeyResolver(this.lastKey);
 
     await this.fittsDelay(resolvedLastKey, resolvedKey);
-    await this.page.keyboard.sendCharacter(resolvedKey.outputChar!);
+    await this.page.keyboard.press(resolvedKey.outputChar!);
+    await this.page.keyboard.insertText(resolvedKey.outputChar!);
     this.setLastKey(resolvedKey.keyboardChar);
 
     for (const modifier of resolvedKey.modifiers.reverse()) {

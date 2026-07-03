@@ -1,42 +1,42 @@
 {
-  "name": "typerr",
-  "version": "1.0.1",
+  "name": "human-typing",
+  "version": "0.5.0",
   "publishConfig": {
     "access": "public"
   },
-  "description": "A Puppeteer utility for human-like typing simulation with natural delays, typos and real keyboard events.",
+  "description": "A playwright utility for human-like typing simulation with natural delays, typos and real keyboard events.",
   "keywords": [
-    "typerr",
-    "puppeteer",
+    "human-typing",
+    "playwright",
     "type",
     "typing",
     "human",
     "human-like",
     "keyboard",
-    "puppeteer-type",
+    "playwright-type",
     "automation",
     "anti-bot",
     "form-filling",
     "input",
-    "puppeteer-plugin"
+    "playwright-plugin"
   ],
-  "homepage": "https://github.com/Prentk1/typerr#readme",
+  "homepage": "https://github.com/iamashishk/human-typing#readme",
   "bugs": {
-    "url": "https://github.com/Prentk1/typerr/issues"
+    "url": "https://github.com/iamashishk/human-typing/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Prentk1/typerr.git"
+    "url": "git+https://github.com/iamashishk/human-typing.git"
   },
   "license": "MIT",
-  "author": "Prentk1",
+  "author": "iamashishk",
   "type": "commonjs",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "test": "npm run build && jest",
+    "test": "npm run build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "npm run format:check && npm run build && npm run test",
@@ -50,17 +50,12 @@
   "devDependencies": {
     "@changesets/cli": "^2.29.6",
     "@eslint/js": "^9.34.0",
-    "@types/jest": "^30.0.0",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "globals": "^16.3.0",
-    "jest": "^30.0.5",
-    "jest-environment-puppeteer": "^11.0.0",
-    "jest-puppeteer": "^11.0.0",
     "prettier": "3.6.2",
-    "puppeteer": "^24.17.0",
-    "ts-jest": "^29.4.1",
+    "playwright": "^1.61.1",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.40.0"

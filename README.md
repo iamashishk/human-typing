@@ -1,21 +1,21 @@
 
-# typerr
+# human-typing
 
-A Puppeteer utility for human-like typing simulation with natural delays, typos and real keyboard events.
+A Playwright utility for human-like typing simulation with natural delays, typos and real keyboard events.
 
 ## Installation
 
 ```bash
-npm install typerr
+npm install human-typing
 ```
 
 ## Usage
 Quick Start
 
 ```ts
-import { Keyboard } from 'typerr';
+import { Keyboard } from 'human-typing';
 
-page.click(inputSelector); // Need to focus input before typing
+page.locator(inputSelector).click(); // Need to focus input before typing
 
 const kb = new Keyboard(page);
 
@@ -23,9 +23,9 @@ await kb.type("Hello world!");
 ```
 
 ## Configuration
-When creating a `Keyboard` instance, you need to provide a Puppeteer `page` along with optional configuration settings:
+When creating a `Keyboard` instance, you need to provide a Playwright `page` along with optional configuration settings:
 
-- `page: puppeteer.Page` – Puppeteer page
+- `page: playwright.Page` – Playwright page
 
 - `typoProbability?: number` – the probability of making a typo
 
@@ -112,7 +112,7 @@ Fields:
 
 ## Example
 ```ts
-import { CustomKey, Keyboard, UserConfig } from 'typerr';
+import { CustomKey, Keyboard, UserConfig } from 'human-typing';
 
 async function run() {
   const config: UserConfig = {
